@@ -25,7 +25,7 @@ const QuizComponent = () => {
     const certificateRef = useRef();
 
     const totalQuestions = TrainingData.length;
-    const passingScore = 5;
+    const passingScore = 70; // Minimum percentage to pass
     const currentQuestion = TrainingData[currentQuestionIndex];
 
     const handleAnswer = (answer) => {
@@ -186,7 +186,7 @@ const QuizComponent = () => {
                 ) : (
                     <div className="intro__container">
                         <h2>Welcome to the Training Module</h2>
-                        <p>Note: A minimum of 75% is required to pass. You can retake the exam anytime.</p>
+                        <p>Note: A minimum of 70% is required to pass. You can retake the exam anytime.</p>
                         <p>Enter your name to get your Certified Phishing Awareness Training Plus (CPAT+):</p>
                         <input
                             type="text"

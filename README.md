@@ -65,3 +65,43 @@ node backend/server.js
 ## 📬 Contact
 
 For questions or support, feel free to [open an issue](https://github.com/quddusyo/killphish-app/issues).
+
+
+------------------------------------------------------------------------------------
+## 🚀 Deploying KillPhish to Firebase and GitHub
+
+### ✅ Push Code to GitHub
+
+From your project root:
+
+```bash
+git init  # only if not already a git repo
+git remote add origin https://github.com/quddusyo/killphish-app.git
+
+git add .
+git commit -m "Initial commit or update"
+git push -u origin main  # or replace 'main' with your branch name
+```
+
+---
+
+### 🌐 Deploy React App to Firebase Hosting
+
+```bash
+npm run build           # Builds your production-ready React app
+firebase deploy --only hosting  # Deploys to Firebase Hosting
+```
+
+---
+
+### 🧠 Optional: Deploy Both Hosting and Functions
+
+```bash
+firebase deploy --only hosting,functions
+```
+
+Repeat `npm run build` + `firebase deploy` whenever you make changes.
+
+---
+
+Happy shipping! 🔐✨
