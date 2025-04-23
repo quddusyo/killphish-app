@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+/* variables for when changing to frequently used colors */
+/* can apply by adding var(--colorWanted) */
+:root {
+  --mainColor: rgb(53, 116, 130);
+  --mainColorTrans:rgba(53,116, 130, 0.8);
+  --mainColorDark: #000;
+  --headerColor: rgb(255, 221, 89);
+  --primaryColor: rgb(63, 159, 192);
+  --secondaryColor: rgb(46, 122, 147);
+  --tertiaryColor: rgb(172, 196, 36);
+  --mainTextColor: rgb(175, 175, 175);
+  --secondaryTextColor: rgb(40, 40, 40);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--mainColorTrans);
+  /* linear gradiant color way */
+  /* background: rgb(226,173,241);
+background: linear-gradient(90deg, rgba(226,173,241,1) 0%, rgba(224,112,255,1) 100%); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer__btn {
+  z-index: 100;
+  cursor: pointer;
+  border: none;
+  position: fixed;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 44px;
+  width: 44px;
+  border-radius: 5px;
+  font-size: 24px;
   color: white;
+  background-color: var(--primaryColor);
+  right: 15px;
+  bottom: 20px;
+}
+.footer__btn:hover {
+  transition: 0.3s ease-in-out;
+  background-color: var(--secondaryColor);
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* removes default a tag styles */
+.a__nostyle {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section__container {
+  margin-top: 170px;
+}
+
+.section__title {
+  text-transform: capitalize;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--mainColor);
+  font-family: "Rowdies";
+  font-size: 22px;
+  background-color: var(--secondaryColor);
+  padding-left: 50px;
+}
+
+.section__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 20px 20px;
+}
+.section__image > img {
+  height: 300px;
+  width: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(125, 125, 125);
+  margin: 7px;
+}
+.link:hover {
+  color: var(--mainColor);
+  transition: 0.3s ease-in-out;
+}
+
+/* button styles */
+.btn {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 7px;
+  border: 1px solid var(--mainTextColor);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn--primary {
+ color: var(--mainColor);
+ background-color: var(--primaryColor);
+}
+.btn--secondary {
+ color: var(--mainColor);
+ background-color: var(--secondaryColor);
+}
+.btn--success {
+ color: var(--mainColor);
+ background-color: green;
+}
+.btn--danger {
+ color: var(--mainColor);
+ background-color: 	rgb(223, 71, 89);
+}
+
+@media screen and (min-width: 540px) {
+  .section__image > img {
+    height: 340px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 768px) {
+  .section__image > img {
+    height: 410px;
+  }
+  .footer__btn {
+    height: 50px;
+    width: 50px;
+    right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__image > img {
+    height: 600px;
   }
 }

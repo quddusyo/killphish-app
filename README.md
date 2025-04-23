@@ -1,3 +1,6 @@
+npm install react-router-dom @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @emailjs/browser react-toastify react-spinners react-to-print html2pdf.js express nodemailer dotenv cors
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
