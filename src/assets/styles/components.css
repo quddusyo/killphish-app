@@ -338,6 +338,12 @@ nav {
   }
 }
 
+@media screen and (min-width: 390px) {
+  .home__intro__btns {
+    top: 175%;
+  }
+}
+
 @media screen and (min-width: 412px) {
   .home__intro__header {
     top: 3%;
